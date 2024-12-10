@@ -1,2 +1,0 @@
-## Devnagari - Roman Nepali Transliteration\
-\

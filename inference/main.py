@@ -5,19 +5,28 @@ from predict import decode_sequence
 def transliterate(text: str) -> str:
     tokenizer = Tokenizer()
     
+    # clean the text
     cleaned_text = clean_and_map_nepali_text(text)
-    print(cleaned_text)
+    # make a list of text
     tokenized_text = cleaned_text.split(" ")
-    print(tokenized_text)
+    # tokenization
     tokenized_devnagari = tokenizer.tokenize_devnagari(tokenized_text)
-    print(tokenized_devnagari)
+    # convert in number
     ohe_token = one_hot_encode_tokens(tokenized_devnagari[0])
-    print(ohe_token)
+    # translation
     decoded_sentence = decode_sequence(ohe_token)
     return decoded_sentence
     
-
 if __name__ == "__main__":
-    devnagari_text = "कार्यालयमा"
-    roman_text = transliterate(devnagari_text)
-    print(roman_text)
+    devnagari_text = "यो एउटा उदाहरण वाक्य हो। यसमा १२३४ नम्बर र केही चिन्हहरू छन्।"
+    roman_text = []
+    for text in devnagari_text.split():
+        if any(char.isdigit() for char in text):
+            # some refactor need
+            roman_text.append(clean_and_map_nepali_text(text))
+            continue
+        t = transliterate(text)
+        roman_text.append(t)
+        print(t)
+    print(" ".join(roman_text))
+        

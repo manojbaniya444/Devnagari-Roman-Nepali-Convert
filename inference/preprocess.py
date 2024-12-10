@@ -41,7 +41,6 @@ def one_hot_encode_tokens(tokens: list):
     MAX_ENCODER_SEQUENCE_LENGTH = 65
     MAX_ENCODER_TOKENS = 19
     ohe = np.zeros((MAX_ENCODER_TOKENS, MAX_ENCODER_SEQUENCE_LENGTH))
-    print(ohe.shape)
     for t, tkn in enumerate(tokens):
         ohe[t, tkn] = 1.0
     # for other just encode the position of the pad token
