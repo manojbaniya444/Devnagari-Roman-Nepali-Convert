@@ -2,6 +2,13 @@
 
 This repo contains training code for converting devnagari nepali word to roman nepali word using character level sequence to sequence model.
 
+Also model is deployed for inference.
+
+## Model can be accessed via API
+
+Model deployed with `FastAPI Server` and can be accessed via api.
+[MODEL API SERVER](./api/)
+
 ## Experiment:
 
 Training different model with different architecture, parameters and data.
@@ -48,6 +55,6 @@ The model is trained as character level prediction.
 
 ##### Inference Example on Model 1 : Model making some minor error
 
-> text = "सहकारी ठगी संगठित अपराध र सम्पत्ति शुद्धीकरणसम्बन्धी कसूरमा अनुसन्धानका लागि वीरगन्ज ल्याइएका राष्ट्रिय स्वतन्त्र पार्टी रास्वपा का सभापति रवि लामिछानेसँग मंगलबार पर्सा सरकारी वकिलको कार्यालयमा करिब  घन्टा बयान लिइएको छ"
+> text = "सहकारी ठगी संगठित अपराध र सम्पत्ति शुद्धीकरणसम्बन्धी कसूरमा अनुसन्धानका लागि वीरगन्ज ल्याइएका राष्ट्रिय स्वतन्त्र पार्टी रास्वपा का सभापति रवि लामिछानेसँग मंगलबार पर्सा सरकारी वकिलको कार्यालयमा करिब घन्टा बयान लिइएको छ"
 
 > Translated = "sahakari thagi sangathit aparadh rupma sampatti shuddhikaransambandhi kasurma anusandhanka lagi virganj lyaieka rashtriya swatantra parti raswapa kat sabhapati ravi lamichhanesanga mangalbar parsa sarkari wakilko karyalayama karib ghanta bayan liieko chha"
