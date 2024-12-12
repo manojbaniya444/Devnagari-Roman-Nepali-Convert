@@ -2,12 +2,9 @@
 
 This repo contains training code for converting devnagari nepali word to roman nepali word using character level sequence to sequence model.
 
-Also model is deployed for inference.
+![Encoder Decoder](./images/ENCODER_DECODER.png)
 
-## Model can be accessed via API
-
-Model deployed with `FastAPI Server` and can be accessed via api.
-[MODEL API SERVER](./api/)
+Also model is deployed for inference. [Inference](./inference/main.py)
 
 ## Experiment:
 
